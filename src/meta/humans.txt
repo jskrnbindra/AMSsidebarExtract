@@ -3,12 +3,11 @@
 
 # TEAM
 
-  akveo.com
-
+ <url>
 # THANKS
 
   <name>
-  Akveo Team
+  Tivo RCS2.X Production Support Team
 
 # TECHNOLOGY COLOPHON
 
