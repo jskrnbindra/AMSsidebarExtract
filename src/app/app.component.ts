@@ -6,10 +6,6 @@ import { BaImageLoaderService, BaThemePreloader, BaThemeSpinner } from './theme/
 import { BaThemeConfig } from './theme/theme.config';
 import { layoutPaths } from './theme/theme.constants';
 
-/*
- * App Component
- * Top Level Component
- */
 @Component({
   selector: 'app',
   styleUrls: ['./app.component.scss'],
