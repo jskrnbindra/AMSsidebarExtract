@@ -26,22 +26,11 @@ import {
 } from './directives';
 
 import {
-  BaAppPicturePipe,
-  BaKameleonPicturePipe,
-  BaProfilePicturePipe
-} from './pipes';
-
-import {
   BaImageLoaderService,
   BaMenuService,
   BaThemePreloader,
   BaThemeSpinner
 } from './services';
-
-import {
-  EmailValidator,
-  EqualPasswordsValidator
-} from './validators';
 
 const NGA_COMPONENTS = [
   BaMenuItem,
@@ -56,12 +45,6 @@ const NGA_DIRECTIVES = [
   BaThemeRun,
 ];
 
-const NGA_PIPES = [
-  BaAppPicturePipe,
-  BaKameleonPicturePipe,
-  BaProfilePicturePipe
-];
-
 const NGA_SERVICES = [
   BaImageLoaderService,
   BaThemePreloader,
@@ -69,14 +52,8 @@ const NGA_SERVICES = [
   BaMenuService
 ];
 
-const NGA_VALIDATORS = [
-  EmailValidator,
-  EqualPasswordsValidator
-];
-
 @NgModule({
   declarations: [
-    ...NGA_PIPES,
     ...NGA_DIRECTIVES,
     ...NGA_COMPONENTS
   ],
@@ -88,7 +65,6 @@ const NGA_VALIDATORS = [
     AppTranslationModule,
   ],
   exports: [
-    ...NGA_PIPES,
     ...NGA_DIRECTIVES,
     ...NGA_COMPONENTS
   ]
@@ -100,7 +76,6 @@ export class NgaModule {
       providers: [
         BaThemeConfigProvider,
         BaThemeConfig,
-        ...NGA_VALIDATORS,
         ...NGA_SERVICES
       ],
     };
