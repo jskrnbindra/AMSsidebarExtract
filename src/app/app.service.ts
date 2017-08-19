@@ -16,11 +16,9 @@ export class AppState {
     return this._state = this._clone(this._state);
   }
 
-  // never allow mutation
   set state(value) {
     throw new Error('do not mutate the `.state` directly');
   }
-
 
   get(prop?: any) {
     // use our state getter for the clone
@@ -33,9 +31,7 @@ export class AppState {
     return this._state[prop] = value;
   }
 
-
   private _clone(object: InternalStateType) {
-    // simple object clone
     return JSON.parse(JSON.stringify(object));
   }
 }
